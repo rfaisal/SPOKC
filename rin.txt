@@ -1,0 +1,64 @@
+Initial Contribution to the "Serial-Parallel Optimization Kit in C"
+
+
+Project source: https://github.com/rfaisal/SPOKC
+Full Project page for RIN: http://rfaisal.github.io/SPOKC/project-rin.html
+
+This sub-project is the initial phase of the SPOKC project. You can learn about the initial goals from the links on the top.
+
+This project was started to provide a standard for implementing the optimization algorithms. As the project will grow, we will add more of the well known optimization algorithms to it. Researchers who develop new optimization algorithms, can compare the performance of their algorithms with the existing SPOKC standard algorithms without having to re-implement them, and when they are done, they can contribute their algorithms to the SPOKC project.
+
+By working on this project you will grow your knowledge on:
+1. Mathematical Optimization.
+2. Parallel Computing.
+3. Iterative Algorithms.
+4. Numerical Analysis.
+
+Important goals:
+1. Define the SPOKC standard.
+2. Write a parallel implementation of the Nelder Mead Simplex algorithm.
+
+Goal 2 requires significant research, since we do not know the answers to the following questions:
+1. which parts of the algorithm can be parallelized, 
+2. how to do so,  
+3. parallelizing will even improve the performance or not, 
+4. if performance improves then by how much, and will this improvement be worth buying parallel hardware for the industries.
+5. Can we use the knowledge we learn from the parallel implementation to improve the original algorithm.
+
+Week 1,2,3 (Prereq): 
+1. Setup linux like environment or at least a gcc compiler.  
+2. Learn to work with git.
+3. Basic studies on Mathematical Optimization.
+4. Study the Nelder Mead Simplex Algorithm.
+5. Run the serial implementation.
+6. Setup OpenMP.
+7. Write my first Parallel Program.
+8. Write my 2nd, 3rd, ... Parallel Programs.
+
+Week 4,5,6 (SPOKC standard):
+1. Discuss about the requirements of the standard.
+2. Write a standard.
+3. Do some research about other standards.
+4. Criticize the standard.
+5. Rewrite the standard. 
+6. LOOP 3,4,5 until satisfied.
+7. Rewrite the serial Nelder Mead Simplex Algorithm with the new standard.
+8. Setup a unit testing framework.
+
+Week 7,8,9,10 (Parallel):
+1. Discuss about the parallel implementation. 
+2. Figure out which parts of the algorithm can be parallelized.
+3. Implement.
+4. Check the accuracy.
+
+Week 11,12 (Testing):
+1. Write unit tests for both implementations.
+2. Test with real data.
+3. Write a performance chart.
+4. Do possible improvements with the knowledge of the testing results.
+
+Week 13,14(Reporting):
+1. Finish up remaining tasks.
+2. Learn Latex.
+3. Write a technical report.
+4. Do a presentation.
