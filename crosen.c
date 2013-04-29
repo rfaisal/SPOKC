@@ -34,7 +34,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
+//#include <malloc.h>
 #include <math.h>
 
 #define MAX_IT      1000      /* maximum number of iterations */
