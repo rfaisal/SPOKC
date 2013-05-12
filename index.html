@@ -33,7 +33,21 @@
       <section id="main_content" class="inner">
         <h1>SPOKC</h1>
 
-<p>The Serial-Parallel Optimization Kit in C consists of implementations of different optimization algorithms. The parallel part uses OpenMP. Test sets for unit testing, extensive performance testing, and 100% code coverage will be provided.</p>
+<p>The Serial-Parallel Optimization Kit in C (SPOKC) consists of implementations of different optimization algorithms. The project was started to bring the optimization algorithms under a flexible standard, so that any researcher developing new optimization algorithms can use this kit for comparisns without having to reimplement again. Every algorithm in this kit has a serial and a parallel implementation. The parallel implemetations uses the OpenMP model. </p>
+
+<h2>Class of optimization algorithms</h2>
+
+<p>SPOKC supports a wide range of optimization algorithms. The SPOKC standard algorithms minimizes (you have to reformulate for maximization problems) a function <code>f:R^n-&gt;R</code>, given a set of constraints. Since there are already very efficient libearies for linear optimization algorithms, SPOCK mainly targets algorithms for solving non-linear, discontinuous, weird optimization problems.</p>
+
+<h2>SPOKC Standard</h2>
+
+<ol>
+<li>An SPOKC Standard algorithm is a minimization algorithm.</li>
+<li>The decision variables (<code>x</code>) are of dimension <code>n</code>, represented by <code>double x[n]</code> in the algorithm. Both <code>x</code> and <code>n</code> are reserved keywords for the SPOKC Standard.</li>
+<li>The objective function <code>f:R^n-&gt;R</code> is represened by <code>double f(double x[])</code> in the code. <code>f</code> is a reserved keyword for the SPOKC Standard.</li>
+<li>The problem can have <code>m</code> constraints. <code>m</code> is a reserved keyword for the SPOKC Standard.</li>
+<li>The name of the algorithm starts with either s (for serial) or p (for parallel) followed by the full name of the algorithm with the words seperated by underscoves. For example, <code>void p_nelder_mead_simplex(double (*f)(double[]), void (*constrain)(double[],int n), ...)</code> represents a parallel implementation of the Nelder Mead Simplex algorithm.</li>
+</ol><p>Test sets for unit testing, extensive performance testing, and 100% code coverage will be provided.</p>
 
 <p>This is open source, so feel free to contribute.</p>
       </section>
