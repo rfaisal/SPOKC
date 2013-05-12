@@ -24,7 +24,7 @@
           <a id="forkme_banner" href="https://github.com/rfaisal/SPOKC">View on GitHub</a>
 
           <h1 id="project_title">SPOKC Project Page for RIN</h1>
-          <h2 id="project_tagline">Project ID: TBD<br />Project Supervisor: Faisal Rahman<br />Project Contributors: TBD</h2>
+          <h2 id="project_tagline">Project ID: TBD<br />Project Supervisor: Faisal Rahman<br />Project Contributors: Michael Hutt, Faisal Rahman.</h2>
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/rfaisal/SPOKC/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/rfaisal/SPOKC/tarball/master">Download this project as a tar.gz file</a>
@@ -35,28 +35,51 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+<h2>Important Note</h2>
+<p>This project is a open-source project and distributed under the MIT license. Anyone who wants to contribute to this project must agree that their contributions will also be open-source and be distributed under the same license.</p>
 <h2>About SPOKC</h2>
-<p>SPOKC stands for Serial-Parallel Optimization Kit in C. This project was started to provide a standard for implementing the optimization algorithms. As the project will grow, we will add more of the well known optimization algorithms to it. Researchers who develops new optimization algorithms, can compare the performance of their algorithms with the existing SPOKC standard algorithms without having to re-implement them, and when they are done they can contribute their algorithms to the SPOKC project. This project is published under MIT license and anyone has the full right to do anything with it.</p>
-<h2>About RIN</h2>
-<p>RIN is the abbreviated form of Research INterface, which is a nonprofit organization for making an interface between graduate and undergraduate folks in Bangladesh with the graduate students studying abroad to provide a flavor of world class research.</p>
+<p>SPOKC stands for Serial-Parallel Optimization Kit in C. This project was started to provide a standard for implementing the optimization algorithms. As the project will grow, we will add more of the well known optimization algorithms to it. Researchers who develop new optimization algorithms, can compare the performance of their algorithms with the existing SPOKC standard algorithms without having to re-implement them, and when they are done, they can contribute their algorithms to the SPOKC project. This project is distributed under the MIT license and anyone has the full right to do anything with it.</p>
 <h2>About RIN</h2>
 <p>RIN is the abbreviated form of Research INterface, which is a nonprofit organization for making an interface between graduate and undergraduate folks in Bangladesh with the graduate students studying abroad to provide a flavor of world class research.</p>
 <h2>Why should you (an undergrad) contribute to this project?</h2>
 <ul>
-<li>As an undergrad you are not expected to do significant contributions to any research areas. Rather your goal is to explore your research interest, build a foundation for future research, and get exposure to graduate level research. This project is perfect for you. It is neither too complex, nor too simple. However, if you are ahead of your peers, you will have the opportunity to do real contributions in this area, i.e., develop a new optimization algorithm, and possibly publish a paper.</li>
-<li>You will expand your knowledge on Mathametical Optimization. The demands of experts on Mathametical optimization is growing rapidly. From sports scheduling to arranging products in a grocery shop, from designing layouts of microprocessors to making a better compiler, and every activity in your everyday life can be optimized.</li>
+<li>As an undergrad you are not expected to do significant contributions to any research areas. Rather your goal is to explore your research interests, build a foundation for future research, and get exposure to graduate level research. This project is perfect for you. It is neither too complex, nor too simple. However, if you are ahead of your peers, you will have the opportunity to do real contributions in this area, i.e., develop a new optimization algorithm, and possibly publish a paper.</li>
+<li>You will expand your knowledge on Mathematical Optimization. The demands of experts on Mathematical optimization is growing rapidly. From sports scheduling to arranging products in a grocery shop, from designing layouts of microprocessors to making a better compiler, and every activity in your everyday life can be optimized.</li>
 <li>You will become the best programmer. Because of my (the project supervisor) obsession of writing the most optimized code in the "right" way, I will push you to become your best.</li>
 <li>You will be writing parallel algorithms. The world is shifting towards parallel computing, and in a few years knowing how to write parallel code will become an essential skill for any job.</li>
-<li>You will be contributing to a world class open-source project. Almost all the companies in North America now ask for open-source contributions in the interview. And if you can prove yourself to be a very good contributor, I will help you to contribute to bigger open-source projects like hacking the linux kernel.</li>
+<li>You will be contributing to a world class open-source project. Almost all the companies in North America now ask for open-source contributions in the interview. And if you can prove yourself to be a very good contributor, I can help you contribute to some bigger open-source projects like hacking the linux kernel.</li>
 <li>I can give you a "kick ass" reccommandation, if you want to persue your masters/phd at UBC's <a href='http://ocana.ok.ubc.ca/index.php'>OCANA</a> group, which is the 2nd biggest optimiation research group in Canada. Both Dr. Yves Lucet and Dr. Warren Hare value my reccommandations.</li>
-<li>You will grow your skills on: Linux, Git, Pointers, Memory management, Algorithms, Algorithm convergence, Numerical instabilities, Unit testing, Parallel computing, Logic, Math, Proof, Set theory, Linear Algebra, etc.</li>
-<li>A small funding may be available.</li>
+<li>You will grow your skills on: Linux, Git, Pointers, Memory management, Algorithms, Algorithm convergence, Numerical instabilities, Unit testing, Parallel computing, Latex, Logic, Math, Proof, Set theory, Linear Algebra, etc.</li>
+<li>You can also use your contribution to this project for your thesis.</li>
+
 </ul>
 <h2>Project Description</h2>
-<p>SPOKC supports a wide range of optimization algorithms. The SPOKC standard algorithms minimize the following function: $$f:R^{n}→R$$ given a set of constraints. What it means is that the input of the function \(f\) is of dimension \(n\) of real numbers and the output is a real number. In programming terms, the function will look like this: `` 
-
+<p>SPOKC supports a wide range of optimization algorithms. The SPOKC standard algorithms minimize the following function: $$f:R^{n}→R$$ given a set of constraints. What it means is that the input of the function \(f\) is of dimension \(n\) of real numbers and the output is a real number. In programming terms, the function will look like this: <code>double f(double x[])</code>. Since there are already very efficient libraries for linear optimization algorithms, SPOKC mainly targets algorithms for solving non-linear, discontinuous, weird optimization problems.
 </p>
-<p>$$x={-b±√{b^2-4ac}}/{2a}$$</p>
+<p>The algorithms are of iterative nature. At each iteration, the algorithm picks a value of \(x\), the input, and pass it to the function. If the output of the function is smaller than the minimum of the previous iterations then the minimum is updated and the algorithm continues until the algorithms knows that it has found the overall minimum for all possible values of \(x\). Obviously, if \(x\) is part of a discrete set then this brute force approach will work. However, normally \(x\) is continuous that means, even if \(0 ≤ x ≤ 1\) there are infinitely many possible values of \(x\). That is when these algorithms are handy. You have already delt with these sort of algorithms. Remember during your higher secondary studies, you had to find maximam or minimam of a function. You differentiate the function and set it to zero, to calculate where maximum and minimum is. Or remember linear programming where you would draw a graph with the constraints and try to locate the minimum in the boundary points. You can think of this research as the extension of those. This library implements similar algorithms.</p>
+<p>
+This project is still in its initial phase. So, I will write down the initial objectives of this project:
+<ul>
+<li>Define the SPOKC standard. That means define the input, output, and algorithm structures, naming conventions, unit testing structure, etc., so that the later algorithms can follow the standard.</li>
+<li>The serial Nelder Mead Simplex algorithm verification. I have added an implementation of this algorithm by Michael F. Hutt. Compile, Run, Optimize, and Verify the algorithm.</li>
+<li>Unit tests for the serial Nelder Mead Simplex algorithm. Write and run unit tests for this algorithm.</li>
+<li>Dig up data of real world problems and run the serial Nelder Mead Simplex algorithm with those data.</li>
+<li>Construct/find problems for which the serial Nelder Mead Simplex algorithm performs the best and the worst in terms of time and space complexity.</li>
+<li>Write a short report on the serial Nelder Mead Simplex algorithm.</li>
+<li>Implement a parallel Nelder Mead Simplex algorithm.*</li>
+<li>Optimize and Verify the parallel Nelder Mead Simplex algorithm.</li>
+<li>Unit tests for the parallel Nelder Mead Simplex algorithm. Write and run unit tests for this algorithm.</li>
+<li>Compare the performance of the parallel implementation with the serial implementation.</li>
+<li>Modify the short report of the serial Nelder Mead Simplex algorithm to add its parallel counterpart.</li>
+</p>
+After the initial phase, the project will continue to grow. Students who contributed to the initial phase will get preference over other students for the later phases. 
+<h2>Required Qualifications</h2>
+<ul>
+<li>You are someone who believes that open-source is the right way to do software.</li>
+<li>You are someone who believes that writing quality code is important.</li>
+<li>You are someone who believes that wasting time to improve the performance of an algoritm is worthwhile.</li>
+<li>You are someone who thinks that <code>while(*t++=*s++);</code> is the most beautiful way to copy a string.</li>
+</ul>
       </section>
     </div>
 
