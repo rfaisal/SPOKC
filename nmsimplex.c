@@ -103,8 +103,8 @@ double simplex(double (*objfunc)(double[]), double start[],int n, double EPSILON
 	}
 	
 	if (constrain != NULL) {
-    constrain(v[j],n);
-  } 
+      constrain(v[j],n);
+    } 
 	/* find the initial function values */
 	for (j=0;j<=n;j++) {
 		f[j] = objfunc(v[j]);
