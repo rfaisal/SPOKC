@@ -3,6 +3,8 @@ This Project is currently being contributed as part of Research Interface (RIN).
 
 RIN Project page: http://www.rin-bd.org/serial-parallel-opt-c/
 
+RIN Project page on Github: http://rfaisal.github.io/SPOKC/project-rin.html
+
 RIN Contributors: Sabbir Ahmad and Rakin Haider
 
 RIN Project Progress: https://www.pivotaltracker.com/s/projects/827507
